@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>template</title>
+<!--
+https://www.sitepoint.com/community/t/how-to-align-three-blocks-one-after-another-in-css/217865
+vngx
+-->
+    <style type="text/css">
+
+html {
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+*,*:before,*:after {
+    box-sizing:inherit;
+}
+
+body {
+    background:blue;
+}
+.outer {
+    width:80%;
+    margin:10% auto 0;
+}
+.header,.main_block,.footer {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+    background-color:white;
+}
+.header {
+    height:1em;  /* TEST height */
+    padding:0 .5em;
+    background-color:#fdf;
+}
+.footer {
+    height:1em;  /* TEST height */
+    padding:0 .5em;
+    background-color:#ddd;
+}
+.masterBottomOne,.masterBottomTwo,.masterBottomThree,.masterBottomFour,.masterBottomFive {
+    display:table-cell;
+    vertical-align:top;
+    padding:0 .5em;
+}
+.masterBottomOne {background-color:#def;}
+.masterBottomTwo {background-color:#dfd;}
+.masterBottomThree {background-color:#fed;}
+.masterBottomFour {background-color:#dff;}
+.masterBottomFive {background-color:#ffd;}
+    </style>
+</head>
+<body>
+
+<div class="outer">
+    <div class="header">
+        <p>Header</p>
+    </div>
+    <div class="main_block">
+        <div class="masterBottomOne">
+            <p>This is Master One Content</p>
+            <p>This is Master One Content</p>
+            <p>This is Master One Content</p>
+            <p>This is Master One Content</p>
+            <p>This is Master One Content</p>
+            <p>This is Master One Content</p>
+        </div>
+        <div class="masterBottomTwo">
+            <p>This is Master Two Content</p>
+            <p>This is Master Two Content</p>
+            <p>This is Master Two Content</p>
+            <p>This is Master Two Content</p>
+            <p>This is Master Two Content</p>
+        </div>
+        <div class="masterBottomThree">
+            <p>This is Master Three Content</p>
+            <p>This is Master Three Content</p>
+            <p>This is Master Three Content</p>
+            <p>This is Master Three Content</p>
+            <p>This is Master Three Content</p>
+        </div>
+        <div class="masterBottomFour">
+            <p>This is Master Four Content</p>
+            <p>This is Master Four Content</p>
+            <p>This is Master Four Content</p>
+            <p>This is Master Four Content</p>
+            <p>This is Master Four Content</p>
+        </div>
+        <div class="masterBottomFive">
+            <p>This is Master Five Content</p>
+            <p>This is Master Five Content</p>
+            <p>This is Master Five Content</p>
+            <p>This is Master Five Content</p>
+            <p>This is Master Five Content</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>This is Admin Footer</p>
+    </div>
+</div>
+
+</body>
+</html>
