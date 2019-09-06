@@ -442,6 +442,12 @@ hr {
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
+
+@if(!empty(Session::get('popup')) && Session::get('popup') == "updated")
+  <script>
+   alert("updated");
+</script>
+@endif
 				<form name="login_form" method="post" class="login100-form validate-form"  action="/customers" >
 					{{ csrf_field() }}
           <span class="login100-form-title p-b-26">
@@ -466,17 +472,10 @@ hr {
           </div>
 
           <div class="wrap-input100 validate-input" >
-            Quantity: <select name="Quantity">
+            Quantity: <select name="quantity">
               <option value="500ml">500 ml</option>
               <option value="1L">1 L</option>
               <option value="2L">2 L</option>
-          </select>
-          </div>
-
-          <div class="wrap-input100 validate-input" >
-            Color: <select name="Color">
-              <option value="Asian Paints Royale In Blue">Asian Paints Royale In Blue</option>
-              <option value="Sugared Peach">Sugared Peach</option>
           </select>
           </div>
 
@@ -497,6 +496,7 @@ hr {
 							</button>
 						</div>
 					</div>
+        
 <br>
 				</form>
 			</div>

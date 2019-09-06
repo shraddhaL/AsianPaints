@@ -11,15 +11,11 @@
 |
 */
 
-//Route::get('/', 'PagesController@home');
+Route::get('/','customersController@admin');
 
-Route::get('/', function () {
-    return view('admin');
-});
-
-Route::get('/home', function () {
-    return view('home');
-});
+//Route::get('/customers', 'customersController@index');
+Route::post('/customers', 'customersController@store');
+Route::get('/customers/home', 'customersController@home');
 
 Route::get('/customerPage', function () {
     return view('customerPage');
@@ -28,4 +24,3 @@ Route::get('/customerPage', function () {
 Route::get('/client', function () {
     return view('client');
 });
-
